@@ -1,0 +1,20 @@
+<!-- template driven form -->
+
+<form #userForm="ngForm" (ngSubmit)="sumbitHandler(userForm)">
+    <div>
+        <label for="username">username</label>
+        <input type="text" name="name"   [(ngModel)]="user.name"  #name="ngModel" required pattern="[a-zA-z]+$">
+        <span *ngIf="name.errors?.['required'] && name.touched">Name is required</span>
+        <span *ngIf="name.errors?.['pattern'] && name.touched">Name has character only</span>
+    </div>
+   
+    <div>
+        <label for="password">password</label>
+        <input type="password" name="password"  [(ngModel)]="user.password" required #password="ngModel" minlength="3">
+        <span *ngIf="password.invalid  && password.touched">password is required</span>
+        <span *ngIf="password.invalid  && password.touched">password has min 3 character</span>
+    </div>
+    <div>
+        <input type="submit"  [disabled]="userForm.invalid" value="save">
+    </div>
+</form>
