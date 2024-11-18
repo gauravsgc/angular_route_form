@@ -1,13 +1,16 @@
 <div>
-    There are multiple matches for Cloud Campus, including an online education platform, a cloud learning experience, an ERP software, and a skill development training network: 
-Online education platform
-Cloud Campus is an online platform that allows users to create and share multimedia course materials. Users can also integrate their course content with other institutions' learning management systems (LMS). 
-Cloud learning experience
-Cloud Campus is a self-directed cloud learning experience from Capgemini Sandbox. It offers one-to-one mentoring relationships with Capgemini mentors on cloud-specific topics. 
-ERP software
-Cloud Campus ERP Software is a multi-campus, multi-user ERP software for schools, colleges, and other educational institutions. It includes web portals for teachers and parents, and mobile apps for teachers, parents, students, and owners. 
-Skill development training network
-CloudKampus is an online institution that offers courses in technology, design, and management. The courses are available on-demand and include short videos, mini-lectures, eBooks, online materials, help videos, and quizzes.
-<br>
+<button (click)="getData()">show Data</button>
 <button [routerLink]="['/About']">back</button>
+
+<table Border="1px">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+    </tr>
+
+    <tr *ngFor="let item of info">
+        <th>{{item.id}}</th>
+        <td>{{item.title}}</td>
+    </tr>
+</table>
 </div>
