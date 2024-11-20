@@ -1,6 +1,15 @@
 <!-- <p>about works!</p> -->
 <!-- <p>Company</p>
 <p>Employee</p> -->
+
+<p>About works!</p>
+<button (click)="showData()">click</button>
+<select>
+<option *ngFor="let item of info">
+    <!-- <th>{{item.id}}</th> -->
+    <td>{{item.title}}</td>
+</option>
+</select>
 <ul>
     <li class="item"><a routerLink="company">Company</a>
         </li>
