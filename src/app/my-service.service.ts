@@ -9,10 +9,10 @@ export class MyServiceService {
   constructor(private http:HttpClient) { }
   getApiData(){
     // console.log('api will call');
-    return this.http.get(`https://jsonplaceholder.typicode.com/posts`)
+    return this.http.get(`http://localhost:8000/home`)
   }
   PostApiData(value: any){
     // console.log('api will call');
-    return this.http.post(`https://jsonplaceholder.typicode.com/posts`,value);
+    return this.http.post(`http://localhost:8000/home`,value);
   }
 }

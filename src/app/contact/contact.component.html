@@ -3,16 +3,16 @@
 <form #userForm="ngForm" (ngSubmit)="sumbitHandler(userForm)">
     <div>
         <label for="username">username</label>
-        <input type="text" name="name"   [(ngModel)]="user.name"  #name="ngModel" required pattern="[a-zA-z]+$">
-        <span *ngIf="name.errors?.['required'] && name.touched">Name is required</span>
-        <span *ngIf="name.errors?.['pattern'] && name.touched">Name has character only</span>
+        <input type="text" name="username"   [(ngModel)]="user.username"  #username="ngModel" required pattern="[a-zA-z]+$">
+        <span *ngIf="username.errors?.['required'] && username.touched">Name is required</span>
+        <span *ngIf="username.errors?.['pattern'] && username.touched">Name has character only</span>
     </div>
    
     <div>
         <label for="password">password</label>
-        <input type="password" name="password"  [(ngModel)]="user.password" required #password="ngModel" minlength="3">
-        <span *ngIf="password.errors?.['required'] && password.touched">password is required</span>
-        <span *ngIf="password.errors?.['minlength'] && password.touched">password has min 3 character</span>
+        <input type="password" name="userpass"  [(ngModel)]="user.userpass" required #userpass="ngModel" minlength="3">
+        <span *ngIf="userpass.errors?.['required'] && userpass.touched">password is required</span>
+        <span *ngIf="userpass.errors?.['minlength'] && userpass.touched">password has min 3 character</span>
       
         
     </div>

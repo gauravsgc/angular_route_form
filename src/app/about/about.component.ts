@@ -19,7 +19,7 @@ export class AboutComponent {
     this.httpdata.getApiData().subscribe(result=>{
       console.log(result);
       
-    this.info=result;
+    // this.info=result;
     })
   }
 }
