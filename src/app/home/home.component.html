@@ -1,4 +1,17 @@
 <p>home works!</p>
+{{name|uppercase}}
+<br/>
+{{name|slice:3}}
+<br>
+{{20|currency:'USD'}}
+{{20|currency:'INR'}}
+{{data| json }}
+<br>
+{{ today | date:'fullDate'  }} 
+<br>
+hello 
+<br>
+{{20|mycustompipe:4}}
 <button (click)="showData()">click</button>
 <select>
     <option *ngFor="let item of info">

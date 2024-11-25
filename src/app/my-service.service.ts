@@ -15,4 +15,5 @@ export class MyServiceService {
     // console.log('api will call');
     return this.http.post(`http://localhost:8000/home`,value);
   }
+  
 }
